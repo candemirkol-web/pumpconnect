@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PumpConnect İndir</title>
+    <script>
+        window.onload = function() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            var ios = "https://apps.apple.com/ng/app/pumpconnect/id6771354184";
+            var android = "https://play.google.com/store/apps/details?id=com.gresan.pumpconnect&pcampaignid=web_share";
+
+            if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+                window.location.href = ios;
+            } else {
+                window.location.href = android;
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Mağazaya yönlendiriliyorsunuz, lütfen bekleyin...</p>
+</body>
+</html>
