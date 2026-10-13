@@ -13,9 +13,9 @@
         }
 
         body {
-            /* Derin Koyu Lacivert Geçişli Arka Plan */
+            /* Derin Koyu Lacivert Geçişli Arka Plan (Aynen Korundu) */
             background: radial-gradient(circle at center, #0e2238 0%, #060d17 100%);
-            color: #ffffff;
+            color: #333333;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,14 +24,14 @@
         }
 
         .container {
-            /* Ortadaki Kart: Şık Koyu Lacivert */
-            background: #0d1b2a;
-            border: 1px solid #1e3247;
+            /* Logodaki Gri Tonlarına Uygun Açık Metalik Gri Kart */
+            background: #f0f4f8;
+            border: 1px solid #d9e2ec;
             width: 100%;
             max-width: 420px;
             padding: 36px 26px;
             border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
 
@@ -43,7 +43,7 @@
 
         h1 {
             font-size: 24px;
-            color: #ffffff;
+            color: #0b1a28; /* Kart grisine uygun koyu lacivert başlık */
             margin-bottom: 6px;
             font-weight: 700;
             letter-spacing: 0.5px;
@@ -51,7 +51,7 @@
 
         p.subtitle {
             font-size: 13px;
-            color: #8da4b8;
+            color: #486581;
             margin-bottom: 30px;
         }
 
@@ -61,7 +61,7 @@
             gap: 14px;
         }
 
-        /* İnci Beyazı Dolgulu Temel Buton Stili */
+        /* İnci Beyazı Dolgulu + Ekstra Gölgeli Buton Stili */
         .btn {
             display: flex;
             align-items: center;
@@ -76,19 +76,23 @@
             cursor: pointer;
             
             /* İnci Beyazı / Sedefli Dolgu */
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 1px solid #ffffff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(180deg, #ffffff 0%, #f1f3f5 100%);
+            border: 1px solid #dce2e6;
+            
+            /* Derinlik Sağlayan Güçlendirilmiş Gölge */
+            box-shadow: 0 8px 20px rgba(11, 26, 40, 0.12), 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             background: #ffffff;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border-color: #cbd5e1;
+            box-shadow: 0 12px 26px rgba(11, 26, 40, 0.2), 0 4px 8px rgba(0, 0, 0, 0.08);
         }
 
         .btn:active {
             transform: scale(0.98);
+            box-shadow: 0 4px 10px rgba(11, 26, 40, 0.1);
         }
 
         /* Buton İçi Yazı & İkon Renkleri */
@@ -109,18 +113,19 @@
             font-weight: 700;
         }
 
-        /* Paylaş Butonu - Şeffaf Koyu İnci Kenarlıklı */
+        /* Paylaş Butonu - Açık Gri Kart Üstü Şeffaf Tasarım */
         .btn-share {
             background: transparent;
-            color: #a0aec0;
-            border: 1px solid #243b53;
+            color: #486581;
+            border: 1px solid #bcccdc;
             box-shadow: none;
         }
 
         .btn-share:hover {
-            background: #162a42;
-            color: #ffffff;
-            border-color: #334e68;
+            background: #e4e9f0;
+            color: #0b1a28;
+            border-color: #9fb3c8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .btn svg {
@@ -133,14 +138,14 @@
         .footer {
             margin-top: 30px;
             font-size: 11px;
-            color: #526e8c;
+            color: #627d98;
         }
 
         #toast {
             visibility: hidden;
             min-width: 200px;
-            background-color: #f8f9fa;
-            color: #0d1b2a;
+            background-color: #0b1a28;
+            color: #ffffff;
             font-weight: 700;
             text-align: center;
             border-radius: 10px;
