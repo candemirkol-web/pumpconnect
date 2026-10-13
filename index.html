@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #09131e;
+            background-color: #060f19; /* PDF Kapak Arka Plan Tonu */
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -23,21 +23,20 @@
         }
 
         .container {
-            background: #122232;
-            border: 1px solid #1c3349;
+            background: #0b1a28; /* PDF Uygulama İçi Kart Tonu */
+            border: 1px solid #182f45;
             width: 100%;
             max-width: 420px;
             padding: 32px 24px;
             border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
             text-align: center;
         }
 
         .logo {
-            max-width: 200px;
+            max-width: 190px;
             height: auto;
-            margin-bottom: 20px;
-            /* Filtre kaldırıldı, logonun orijinal rengi korundu */
+            margin-bottom: 22px;
         }
 
         h1 {
@@ -50,7 +49,7 @@
 
         p.subtitle {
             font-size: 13px;
-            color: #8da4b8;
+            color: #7d9bb8;
             margin-bottom: 28px;
         }
 
@@ -70,8 +69,7 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            transition: transform 0.1s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid transparent;
+            transition: all 0.2s ease;
             cursor: pointer;
         }
 
@@ -79,22 +77,42 @@
             transform: scale(0.98);
         }
 
-        .btn-ios, .btn-android, .btn-pdf {
-            background-color: #1a2f44;
-            color: #00d2c4;
-            border-color: #24415e;
+        /* Store ve Kılavuz Butonları - Uygulama İçi Camgöbeği Vurgulu Tasarım */
+        .btn-app {
+            background-color: #102436;
+            color: #00e5d4;
+            border: 1px solid #1c3a54;
         }
 
+        .btn-app:hover {
+            background-color: #162f47;
+            border-color: #00e5d4;
+            box-shadow: 0 0 12px rgba(0, 229, 212, 0.2);
+        }
+
+        /* WhatsApp İletişim Butonu */
         .btn-whatsapp {
-            background-color: #25D366;
+            background-color: #00c853;
             color: #ffffff;
+            border: 1px solid #00e676;
             font-weight: 700;
         }
 
+        .btn-whatsapp:hover {
+            background-color: #00e676;
+            box-shadow: 0 0 14px rgba(0, 230, 118, 0.3);
+        }
+
+        /* Paylaş Butonu */
         .btn-share {
             background-color: transparent;
-            color: #8da4b8;
-            border-color: #24415e;
+            color: #7d9bb8;
+            border: 1px solid #182f45;
+        }
+
+        .btn-share:hover {
+            color: #ffffff;
+            border-color: #2c4d6f;
         }
 
         .btn svg {
@@ -107,20 +125,20 @@
         .footer {
             margin-top: 28px;
             font-size: 11px;
-            color: #5c748a;
+            color: #4a6580;
         }
 
         #toast {
             visibility: hidden;
             min-width: 200px;
-            background-color: #00d2c4;
-            color: #09131e;
-            font-weight: 600;
+            background-color: #00e5d4;
+            color: #060f19;
+            font-weight: 700;
             text-align: center;
             border-radius: 8px;
             padding: 10px;
             position: fixed;
-            z-index: 1;
+            z-index: 10;
             bottom: 30px;
             font-size: 13px;
             opacity: 0;
@@ -144,25 +162,25 @@
 
         <div class="btn-group">
             <!-- iOS App Store Button -->
-            <a href="https://apps.apple.com/ng/app/pumpconnect/id6771354184" class="btn btn-ios" target="_blank">
+            <a href="https://apps.apple.com/ng/app/pumpconnect/id6771354184" class="btn btn-app" target="_blank">
                 <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.9 69.5-34.3z"/></svg>
                 App Store'dan İndir
             </a>
 
             <!-- Android Google Play Button -->
-            <a href="https://play.google.com/store/apps/details?id=com.gresan.pumpconnect&pcampaignid=web_share" class="btn btn-android" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.gresan.pumpconnect&pcampaignid=web_share" class="btn btn-app" target="_blank">
                 <svg viewBox="0 0 512 512"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/></svg>
                 Google Play'den İndir
             </a>
 
             <!-- Mobil Uygulama Kullanım Kılavuzu -->
-            <a href="kilavuz2.pdf" class="btn btn-pdf" target="_blank">
+            <a href="kilavuz2.pdf" class="btn btn-app" target="_blank">
                 <svg viewBox="0 0 384 512"><path d="M181.9 256.1c-5-16-4.9-46.9-2-63.2 15.8-86.2 133.7-64.1 120.4 20-3.3 20.8-19.6 43.1-40.8 59.9 22.8 45.7 41.3 93.3 58.7 139.7 16 42.6-32.8 77.9-66.9 44-18.4-18.3-33-40.4-48.4-62.9-22.1 10.3-46.2 18.5-70.5 23.9-33.8 7.5-68.8-18.8-54.8-51.8 11.2-26.3 43-42.3 75.3-51.5 9.7-20 20.6-39.2 29-58.2zm11.7 101.8c12.2 17.5 23.8 35.2 37.9 51 9-9.5 4.1-26.2-3.1-36.2-10.4-14.4-22.2-28-34.8-41.8-10.1 8.9-20.2 18-30.2 27 10.1 0 20.2 0 30.2 0z"/></svg>
                 Mobil Uygulama Kullanım Kılavuzu
             </a>
 
             <!-- Genel Kullanım Kılavuzu (PDF) -->
-            <a href="kilavuz.pdf" class="btn btn-pdf" target="_blank">
+            <a href="kilavuz.pdf" class="btn btn-app" target="_blank">
                 <svg viewBox="0 0 384 512"><path d="M181.9 256.1c-5-16-4.9-46.9-2-63.2 15.8-86.2 133.7-64.1 120.4 20-3.3 20.8-19.6 43.1-40.8 59.9 22.8 45.7 41.3 93.3 58.7 139.7 16 42.6-32.8 77.9-66.9 44-18.4-18.3-33-40.4-48.4-62.9-22.1 10.3-46.2 18.5-70.5 23.9-33.8 7.5-68.8-18.8-54.8-51.8 11.2-26.3 43-42.3 75.3-51.5 9.7-20 20.6-39.2 29-58.2zm11.7 101.8c12.2 17.5 23.8 35.2 37.9 51 9-9.5 4.1-26.2-3.1-36.2-10.4-14.4-22.2-28-34.8-41.8-10.1 8.9-20.2 18-30.2 27 10.1 0 20.2 0 30.2 0z"/></svg>
                 Genel Kullanım Kılavuzu (PDF)
             </a>
